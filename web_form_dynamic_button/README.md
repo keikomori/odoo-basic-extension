@@ -2,26 +2,26 @@
 
 # Hide buttons in form views
 
-该模块可根据表达式对表单视图上的控制按钮进行动态显示或隐藏，目前支持对如下按钮进行处理：
+This module can dynamically display or hide the control buttons on the form view based on expressions. Currently, the following buttons are supported:：
 
-- 编辑按钮 `Edit`
-- 创建按钮 `Create`
-- 删除按钮 `Delete`
-- 复制按钮 `Duplicate`
+- Edit button `Edit`
+- Create button  `Create`
+- Delete button  `Delete`
+- Duplicate button  `Duplicate`
 
 ## Features
 
-- 添加属性 `edit_expr` 到表单 `form` 标签中以在表达式成立时才显示编辑按钮
-- 添加属性 `create_expr` 到表单 `form` 标签中以在表达式成立时才显示创建按钮
-- 添加属性 `delete_expr` 到表单 `form` 标签中以在表达式成立时才显示删除按钮
-- 添加属性 `duplicate_expr` 到表单 `form` 标签中以在表达式成立时才显示复制按钮
+- Add attributes  `edit_expr` to the form `form` in the label, the edit button is displayed only when the expression is established
+- Add attributes `create_expr` to the form `form` in the label, the create button is displayed only when the expression is established
+- Add attributes `delete_expr` to the form `form` in the label, the delete button is displayed only when the expression is established
+- Add attributes `duplicate_expr` to the form `form` in the label, the duplicate button is displayed only when the expression is established
 
 ## Usage
 
-- 在定义表单视图时，添加属性 `edit_expr="state == 'draft'"` 到 `form` 标签内：
+- When defining the form view, add attributes `edit_expr="state == 'draft'"` arrive `form` within the label：
 
 ```xml
-<!-- 在该例中，当 state 不为 draft 时，编辑按钮将会被隐藏，反之则会显示 -->
+<!-- In this example, when the state is not draft, the edit button will be hidden, otherwise it will be displayed -->
 ...
 <field name="arch" type="xml">
     <form string="View name" edit_expr="state == 'draft'">
@@ -36,11 +36,11 @@
 ...
 ```
 
-在 `Features` 中列出的属性可以同时使用，如上例所示，直接添加相应的属性到 `form` 标签中即可。
+Exist `Features` the attributes listed in can be used at the same time, as shown in the above example, directly add the corresponding attributes to `form` just in the label.
 
 ## Bug Tracker
 
-如果遇到任何问题，欢迎在 [GitHub Issues](https://github.com/cognichain/odoo-basic-extension/issues) 进行反馈。
+If you encounter any problems, welcome to [GitHub Issues](https://github.com/cognichain/odoo-basic-extension/issues) give feedback
 
 ## Credits
 
@@ -52,4 +52,4 @@
 
 <img src="./static/description/icon.png" width="20%" alt="深圳市知链科技有限公司" />
 
-该模块由深圳市知链科技有限公司开发及维护。
+This module is developed and maintained by Shenzhen Zhilian Technology Co., Ltd.
