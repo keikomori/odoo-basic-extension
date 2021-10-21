@@ -8,9 +8,9 @@ odoo.define('web_form_dynamic_button', function (require) {
 
     FormController.include({
         /**
-         * 根据表达式处理按钮 ``edit`` 和 ``create`` 的显示或隐藏
-         * 在 ``<form />`` 中添加属性 ``edit_expr="expr"`` 或 ``create_expr="expr"``
-         * 其中 ``expr`` 为表达式，如 ``state=='draft'``
+         * According to the expression processing button ``edit`` and ``create`` show or hide
+          * Add the attribute ``edit_expr="expr"`` or ``create_expr="expr"`` in ``<form />``
+          * Where ``expr'' is an expression, such as ``state=='draft'`
          * @private
          */
         _updateButtons: function () {
@@ -27,9 +27,9 @@ odoo.define('web_form_dynamic_button', function (require) {
             }
         },
         /**
-         * 根据表达式处理按钮 ``delete`` 和 ``duplicate`` 的显示或隐藏
-         * 在 ``<form />`` 中添加属性 ``delete_expr="expr"`` 或 ``duplicate_expr="expr"``
-         * 其中 ``expr`` 为表达式，如 ``state=='draft'``
+         * According to the expression processing button ``delete`` and ``duplicate`` show or hide
+          * Add the attribute ``delete_expr="expr"`` or ``duplicate_expr="expr"`` in ``<form />``
+          * Where ``expr`` is an expression, such as ``state=='draft'``
          * @private
          */
         _updateSidebar: function () {
@@ -52,12 +52,12 @@ odoo.define('web_form_dynamic_button', function (require) {
                             callback: self['_on' + capAct + 'Record'].bind(self),
                         });
                     }
-                    // 删除 delete 和 duplicate 动作
+                    // Delete 'delete' and 'duplicate' actions
                     self.sidebar.items.other = self.sidebar.items.other.filter(function (item) {
                         return item.label != t_label;
                     });
                 });
-                // 若条件成立，将动作添加到 other 中
+                // If the condition is true, add the action to other
                 this.sidebar.items.other = otherItems.concat(this.sidebar.items.other);
                 this._updateEnv();
             }
